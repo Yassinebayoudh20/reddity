@@ -1,0 +1,30 @@
+<div class="article-container">
+  <div class="value-label">
+    <div class="value">
+      {{ article.votes }}
+    </div>
+    <div class="label">Points</div>
+  </div>
+
+  <div class="article-info">
+    <!-- <a href=""></a> -->
+    <div class="info-container">
+      <a class="article-header" [href]="article.link">{{ article.title }}</a>
+      <a class="article-header" id="link">{{ article.domain() }}</a>
+    </div>
+    <div class="list-container">
+      <ul class="items-list">
+        <li class="item">
+          <a (click)="voteUp()">
+            <i> ⬆ upvote</i>
+          </a>
+        </li>
+        <li class="item">
+          <a (click)="voteDown()">
+            <i> ⬇ downvote</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
